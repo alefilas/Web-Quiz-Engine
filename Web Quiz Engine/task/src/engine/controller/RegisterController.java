@@ -15,7 +15,7 @@ import javax.validation.Valid;
 public class RegisterController {
 
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @PostMapping(path = "/api/register")
     private ResponseEntity<User> addUser(@Valid @RequestBody User user) {

@@ -18,7 +18,7 @@ public class Quiz {
 
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "UserId")
+    @JoinColumn(name = "user_id")
     protected User user;
 
     @NotBlank
@@ -31,7 +31,7 @@ public class Quiz {
     @ElementCollection
     @CollectionTable(
             name = "options",
-            joinColumns = @JoinColumn(name = "QuizId")
+            joinColumns = @JoinColumn(name = "quiz_id")
     )
     @Column(name = "option")
     @NotNull
@@ -41,7 +41,7 @@ public class Quiz {
     @ElementCollection
     @CollectionTable(
             name = "answers",
-            joinColumns = @JoinColumn(name = "QuizId")
+            joinColumns = @JoinColumn(name = "quiz_id")
     )
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private List<Integer> answer;

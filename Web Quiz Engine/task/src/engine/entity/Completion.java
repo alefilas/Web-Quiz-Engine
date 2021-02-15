@@ -19,7 +19,7 @@ public class Completion {
 
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "UserId")
+    @JoinColumn(name = "user_id")
     private User user;
 
     public Completion() {
